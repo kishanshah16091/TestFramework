@@ -1,15 +1,12 @@
 Feature: Adding membership to the employee
 
   Background:
-  #  Given user is navigated to HRMS application
-    When user enters valid admin credentials
-    And user clicks on login button
-    Then admin user is successfully logged in
-    When user clicks on PIM option
-    And user clicks on add employee option
-    And user enters "Shawn" "Raj" and "Shah"
-    And user clicks on save button
-    Then employee added successfully
+    #Given user is navigated to HRMS application
+    * user enters valid admin credentials
+    * user clicks on login button
+    * admin user is successfully logged in
+    * navigates to PIM option and click EmployeeList
+    * selects first employee
 
   @test
   Scenario: Adding membership to the employee
@@ -21,5 +18,7 @@ Feature: Adding membership to the employee
     And enters the subscription amount in the text box
     And click on the currency drop down and select the value
     And click the Subscription Start Date field and select Values
-    Then click on the subscription renewal date calendar and select a date
+    And click on the subscription renewal date calendar and select a date
+    Then click on save button
+
 

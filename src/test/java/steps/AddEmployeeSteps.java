@@ -12,9 +12,6 @@ public class AddEmployeeSteps extends CommonMethods {
 
     @When("user clicks on PIM option")
     public void user_clicks_on_pim_option() {
-        //older version of writing the code
-        // WebElement pimOPtion = driver.findElement(By.xpath("abc"));
-        // pimOPtion.click();
         click(employeeSearchPage.pimOption);
     }
 
@@ -25,9 +22,9 @@ public class AddEmployeeSteps extends CommonMethods {
 
     @When("user enters firstname middlename and lastname")
     public void user_enters_firstname_middlename_and_lastname() {
-        sendText(addEmployeePage.firstNameField, "dasir");
-        sendText(addEmployeePage.middleNameField, "hamilia");
-        sendText(addEmployeePage.lastNameField, "tolom");
+        sendText(addEmployeePage.firstNameField, "Kishan");
+        sendText(addEmployeePage.middleNameField, "Raj");
+        sendText(addEmployeePage.lastNameField, "Shah");
     }
 
     @When("user clicks on save button")

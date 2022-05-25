@@ -1,11 +1,22 @@
 package steps;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
 
 public class AddMembershipSteps extends CommonMethods {
 
+    @Given("navigates to PIM option and click EmployeeList")
+    public void navigates_to_pim_option_and_click_employee_list() {
+        click(addmembershipPage.pimOption);
+        click(addmembershipPage.employeeList);
+    }
+
+    @Given("selects first employee")
+    public void selects_first_employee() {
+        click(addmembershipPage.firstName);
+    }
 
     @When("click the membership option")
     public void click_the_membership_option() {
@@ -51,16 +62,21 @@ public class AddMembershipSteps extends CommonMethods {
 
     @Then("click the Subscription Start Date field and select Values")
     public void click_the_subscription_start_date_field_and_select_values() {
-       click(addmembershipPage.subscriptionCommenceDate);
-       selectDdValue(addmembershipPage.month,"Jun");
-        selectDdValue(addmembershipPage.month,"2022");
+        click(addmembershipPage.subscriptionCommenceDate);
+        selectDdValue(addmembershipPage.month, "Jun");
+        selectDdValue(addmembershipPage.month, "2022");
     }
 
     @Then("click on the subscription renewal date calendar and select a date")
     public void click_on_the_subscription_renewal_date_calendar_and_select_a_date() {
         click(addmembershipPage.subscriptionCommenceDate);
-        selectDdValue(addmembershipPage.month,"Jun");
-        selectDdValue(addmembershipPage.month,"2023");
+        selectDdValue(addmembershipPage.month, "Jun");
+        selectDdValue(addmembershipPage.month, "2023");
     }
-}
+        @Then("click on save button")
+        public void click_on_save_button() {
+            click(addEmployeePage.saveButton);
+        }
+    }
+
 

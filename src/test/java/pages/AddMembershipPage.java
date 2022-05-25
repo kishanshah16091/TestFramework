@@ -11,6 +11,15 @@ public class AddMembershipPage extends CommonMethods {
     @FindBy(xpath = "//*[@id=\"sidenav\"]/li[11]/a")
     public static WebElement membershipButton;
 
+    @FindBy(id="menu_pim_viewPimModule")
+    public WebElement pimOption;
+
+    @FindBy(id="menu_pim_viewEmployeeList")
+    public WebElement employeeList;
+
+    @FindBy(xpath = "//*[@id=\"resultTable\"]/tbody/tr[1]/td[2]/a")
+    public WebElement firstName;
+
     // locator for click add button to add membership
     @FindBy(id = "btnAddMembershipDetail")
     public WebElement addMembershipButton;
@@ -40,6 +49,10 @@ public class AddMembershipPage extends CommonMethods {
     @FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/div/select[2]")
     public WebElement year;
 
+    @FindBy(xpath = " //*[@id=\"btnSaveMembership\"]")
+    public WebElement saveButton;
+
+    //*[@id="btnSaveMembership"]
     public AddMembershipPage() {
         PageFactory.initElements(driver, this);
     }
